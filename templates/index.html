@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Cybersecurity Dashboard</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static',
+filename='css/style.css') }}">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+<h2>CYBER AI</h2>
+
+<ul>
+
+<li>Dashboard</li>
+<li>Threat Monitor</li>
+<li>Analytics</li>
+<li>Traffic Logs</li>
+<li>Settings</li>
+
+</ul>
+
+</div>
+
+<div class="main">
+
+<h1>
+AI-Powered Cybersecurity Dashboard
+</h1>
+
+<div class="cards">
+
+<div class="card">
+<h3>Network Traffic</h3>
+<h1 id="traffic">0</h1>
+</div>
+
+<div class="card">
+<h3>Threat Count</h3>
+<h1 id="threats">0</h1>
+</div>
+
+<div class="card">
+<h3>CPU Usage</h3>
+<h1 id="cpu">0%</h1>
+</div>
+
+<div class="card">
+<h3>RAM Usage</h3>
+<h1 id="ram">0%</h1>
+</div>
+
+</div>
+
+<div class="status-box">
+
+<h2>Status:</h2>
+
+<h1 id="status">
+SAFE
+</h1>
+
+</div>
+
+<div class="chart-container">
+
+<canvas id="trafficChart"></canvas>
+
+</div>
+
+<div class="logs" id="logs">
+
+<h2>Live Threat Logs</h2>
+
+</div>
+
+</div>
+
+<script src="{{ url_for(
+'static',
+filename='js/script.js'
+) }}"></script>
+
+</body>
+</html>
